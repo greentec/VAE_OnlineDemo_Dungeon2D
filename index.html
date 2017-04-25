@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang=en>
+<meta charset='utf-8'>
+<head>
+  <h1>NDC17 - Online Demo - 1. Generate 2D Dungeon</h1>
+  <link rel='stylesheet' href='css/main.css' />
+</head>
+<body>
+  <div>
+    <div>
+      1st
+      <canvas id='dungeonCanvas0' width='80' height='80'></canvas>
+    </div>
+    <div>
+      2nd
+      <canvas id='dungeonCanvas' width='80' height='80'></canvas>
+    </div>
+    <div>
+      <input type="radio" name="frameSelect" value="firstChange" id="firstChange" checked='true'>
+      <label for="firstChange">1st Change</label>
+    </div>
+    <div>
+      <input type="radio" name="frameSelect" value="secondChange" id="secondChange">
+      <label for="secondChange">2nd Change</label>
+    </div>
+    <p>
+    <div>
+      <canvas id='lerpCanvas' width='1152' height='128'></canvas>
+      lerp
+    </div>
+    <div>
+      <canvas id='slerpCanvas' width='1152' height='128'></canvas>
+      slerp
+    </div>
+  </div>
+
+  <input id='getRandom' type='submit' value='set random' onclick='getRandom();' style='width:200px; height:30px;'/>
+  <input id='getZero' type='submit' value='set zero mean' onclick='getZero();' style='width:200px; height:30px;'/>
+  <p>
+  <input id='getLerp' type='submit' value='get lerp' onclick='getLerp();' style='width:200px; height:30px;'/>
+  <input id='getSlerp' type='submit' value='get slerp' onclick='getSlerp();' style='width:200px; height:30px;'/>
+  <div id='imageHolder'>
+
+  </div>
+  <script src='js/jquery-3.1.1.min.js'></script>
+  <script src='js/main.js'></script>
+  <script src='js/convnet.js'></script>
+  <script src='js/layer0.js'></script>
+  <script src='js/layer1.js'></script>
+  <script src='js/layer2.js'></script>
+  <script src='js/layer3.js'></script>
+  <script src='js/mean100.js'></script>
+</body>
+</html>
